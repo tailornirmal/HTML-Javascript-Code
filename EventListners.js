@@ -40,3 +40,13 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(Person);
 
 });
+
+let nums1 = [1,2,3,0,0,0]
+let m = 3;
+let nums2 = [2,5,6]
+
+// output [ 1, 2, 2, 3, 5, 6 ]
+
+let merge = function(nums1, m, nums2, n) {
+    
+}
