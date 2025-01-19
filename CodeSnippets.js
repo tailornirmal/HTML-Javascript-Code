@@ -1,3 +1,34 @@
+const input = [2, 7, 11, 15, 5, 4, 4];
+const target = 9;
+// output return [1, 2];
+
+function SortArray(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let tmp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = tmp;
+      }
+    }
+  }
+  return arr;
+}
+
+let result1 = [];
+function SumByTarget(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        result.push([i, j]);
+      }
+    }
+  }
+  return result1;
+}
+
+console.log(SortArray(input, target));
+
 const inventory = [
   { name: "asparagus", type: "vegetables", quantity: 5 },
   { name: "bananas", type: "fruit", quantity: 0 },
