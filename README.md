@@ -1,5 +1,3 @@
-# This is Javascript learning space
+# Javascript, HTML, CSS, React JS, Redux Interview Questions and Code Snippets
 
-Core,Vanila JS
-HTML
-CSS
+/src

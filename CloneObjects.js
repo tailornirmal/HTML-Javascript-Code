@@ -1,21 +1,24 @@
 let Person = {
-    name: 'Nirmal',
-    age: 34,
-    address: {
-        city: 'Pune',
-        state: 'MH'
-    }
-}
+  name: "Nirmal",
+  age: 34,
+  address: {
+    city: "Pune",
+    state: "MH",
+  },
+};
 
-let obj = { name: "Nirmal", age: 34, address: {
-    city: 'Pune',
-    state: 'MH'
-} }
-let copyObj = { ...obj }
+let obj = {
+  name: "Nirmal",
+  age: 34,
+  address: {
+    city: "Pune",
+    state: "MH",
+  },
+};
+let copyObj = { ...obj };
 obj.address.city = "Nagpur";
 console.log(obj);
 console.log(copyObj);
-
 
 // Shallow Copy - 1
 
@@ -32,8 +35,8 @@ console.log(personCopy1);
 // Shallow Copy - 3
 
 let personCopy3 = {};
-for(let prop  in Person) {
-    personCopy3[prop] = Person[prop];
+for (let prop in Person) {
+  personCopy3[prop] = Person[prop];
 }
 Person.address.city = "Pune";
 console.log(personCopy3);
