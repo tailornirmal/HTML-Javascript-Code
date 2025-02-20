@@ -77,16 +77,98 @@
 
 // traverseDOM(document.body);
 
-if (window.Worker) {
-  const myWorker = new Worker("Worker.js");
+// if (window.Worker) {
+//   const myWorker = new Worker("Worker.js");
 
-  myWorker.postMessage("Hello, Worker!");
+//   myWorker.postMessage("Hello, Worker!");
 
-  myWorker.onmessage = function (event) {
-    console.log("Message from Worker:", event.data);
-  };
+//   myWorker.onmessage = function (event) {
+//     console.log("Message from Worker:", event.data);
+//   };
 
-  myWorker.onerror = function (error) {
-    console.error("Error from Worker:", error);
-  };
+//   myWorker.onerror = function (error) {
+//     console.error("Error from Worker:", error);
+//   };
+// }
+
+// const object1 = {
+//   name: "Nirmal",
+//   age: "34",
+//   address: {
+//     city: "Pune",
+//     state: "MH",
+//     country: "IN",
+//   },
+//   phone: "4555",
+// };
+
+// const object2 = {
+//   name: "Nirmal",
+//   age: "35",
+//   address: {
+//     city: "Nagpur",
+//     state: "MH",
+//     country: "IN",
+//   },
+//   phone: "1234",
+// };
+
+// function compareObjects(object1, object2) {
+//   const diffKeys = {};
+
+//   for (const key in object1) {
+//     if (object1[key] !== object2[key]) {
+//       if (
+//         typeof object1[key] === "object" &&
+//         typeof object2[key] === "object"
+//       ) {
+//         for (const subKey in object1[key]) {
+//           if (object1[key][subKey] !== object2[key][subKey]) {
+//             diffKeys.push(`${key}.${subKey}`);
+//           }
+//         }
+//       } else {
+//         diffKeys.push(key);
+//       }
+//     }
+//   }
+
+//   return diffKeys;
+// }
+
+// console.log(compareObjects(object1, object2));
+
+const fruits = [
+  {
+    type: "oranges",
+    amount: 10,
+  },
+  {
+    type: "apples",
+    amount: 0,
+  },
+  {
+    type: "oranges",
+    amount: 5,
+  },
+];
+
+function groupByType(fruits) {
+  //   return fruits.reduce((acc, fruit) => {
+  //     if (!acc[fruit.type]) {
+  //       acc[fruit.type] = 0;
+  //     }
+  //     acc[fruit.type] += fruit.amount;
+  //     return acc;
+  //   }, {});
+
+  return fruits.reduce((acc, fruit) => {
+    if (!acc[fruit.type]) {
+      acc[fruit.type] = 0;
+    }
+    acc[fruit.type] += fruit.amount;
+    return acc;
+  }, {});
 }
+
+console.log(groupByType(fruits));
